@@ -1,12 +1,12 @@
 class Nova < Formula
   desc "AI-powered CLI for project management and development workflows with MCP integration"
   homepage "https://github.com/munichbughunter/nova"
-  version "0.0.0"
+  version "0.1.0-alpha"
   license "MIT"
   
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/munichbughunter/nova/releases/download/v#{version}/nova-macos-arm64"
-    sha256 "PLACEHOLDER_ARM64_SHA256"  # Wird automatisch aktualisiert
+    url "https://github.com/munichbughunter/nova/archive/refs/tags/v0.1.0-alpha.tar.gz"
+    sha256 "b1b7ca1eab57bb0f554b2cee9251b079d62f862bb12accba41f4f13fb8f35d44"  # Wird automatisch aktualisiert
   elsif OS.mac? && Hardware::CPU.intel?
     url "https://github.com/munichbughunter/nova/releases/download/v#{version}/nova-macos-amd64"
     sha256 "PLACEHOLDER_AMD64_SHA256"  # Wird automatisch aktualisiert
