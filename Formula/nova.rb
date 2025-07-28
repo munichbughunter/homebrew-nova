@@ -1,7 +1,7 @@
 class Nova < Formula
   desc "AI-powered CLI for project management and development workflows with MCP integration"
   homepage "https://github.com/munichbughunter/nova"
-  version "0.1.0-alpha"
+  version "v0.1.0-alpha"
   license "MIT"
   
   if OS.mac? && Hardware::CPU.arm?
