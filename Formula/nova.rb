@@ -1,7 +1,7 @@
 class Nova < Formula
   desc "Nova CLI - Intelligent project management and development workflows"
   homepage "https://github.com/munichbughunter/nova"
-  version "v0.1.0"
+  version "v0.0.0"
   
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/munichbughunter/nova/releases/download/v0.1.0/nova-macos-arm64"
