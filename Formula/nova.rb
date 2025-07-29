@@ -16,6 +16,55 @@ class Nova < Formula
 
   def install
     bin.install Dir["*"].first => "nova"
+    chmod 0755, bin/"nova"
+  end
+
+  def caveats
+    <<~EOS
+      🎉 Nova CLI has been installed successfully!
+
+      To get started:
+      
+      1. Run the setup assistant:
+         $ nova setup
+
+      2. Try out some commands:
+         $ nova --version
+
+         # GitLab Integration
+         $ nova gitlab projects      # List GitLab projects
+         $ nova gitlab dashboard     # Dashboard for GitLab projects
+
+         # Jira Integration
+         $ nova jira issues         # List Jira issues
+         $ nova jira search        # Search Jira content
+
+         # Confluence Integration
+         $ nova confluence spaces   # List Confluence spaces
+         $ nova confluence search   # Search content
+
+         # Monitoring & Operations
+         $ nova datadog teams      # List Datadog teams
+
+         # AI-Powered Assistant
+         $ nova agent              # AI-powered assistance
+         $ nova agent eng review --path "src/agents/engineering/code-review/types.ts"
+         $ nova agent eng review-mr --interactive
+         
+      For more information and complete command list:
+         $ nova --help
+         $ nova <command> --help
+
+      Documentation: #{homepage}
+
+      To enable shell completions, add to your shell config:
+      
+      For zsh:
+        echo 'eval "$(nova completions zsh)"' >> ~/.zshrc
+
+      For bash:
+        echo 'eval "$(nova completions bash)"' >> ~/.bashrc
+    EOS
   end
 
   test do
